@@ -1,0 +1,92 @@
+
+
+
+<!-- <h1><%=@user_name_Name4%></h1> -->
+
+
+	
+
+
+    <!-- Mango Flip List that triggers every 3 seconds -->
+    <div class="list-tile mango" style="height:1200px; width:1400px; margin: 0 auto;">
+        <span class="tile-title"></span>
+        <ul class="flip-list sixTiles" data-mode="flip-list" data-delay="8000">
+       		
+
+
+
+            <% if @user_name.present?%>
+			<%@user_name.each do |u|%>
+
+			<% if @user_name2.present?%>
+			<%@user_name2.each do |u2|%>
+
+			<% if @user_name3.present?%>
+			<%@user_name3.each do |u3|%>
+		
+
+			<% if @user_name4.present?%>
+			<%@user_name4.each do |u4|%>
+
+			<% if @user_name5.present?%>
+			<%@user_name5.each do |u5|%>
+
+
+       		
+            <li  style="height:200px; width:200px;">
+
+                <div><%= image_tag u.images.standard_resolution.url, class: "full", alt: "2"%></div>
+                <div><%= image_tag u2.images.standard_resolution.url, class: "full", alt: "2"%></div>
+
+            </li>
+            
+           
+
+
+            
+            <li  style="height:200px; width:200px;">
+                <div><%= image_tag u3.images.standard_resolution.url, class: "full", alt: "2"%></div>
+                <div><%= image_tag u4.images.standard_resolution.url, class: "full", alt: "2"%></div>
+            </li>
+           
+
+
+          
+            <li  style="height:200px; width:200px;">
+                <div><%= image_tag u.images.standard_resolution.url, class: "full", alt: "3"%></div>
+                <div><%= image_tag u4.images.standard_resolution.url, class: "full", alt: "3"%></div>
+            </li>
+
+             <li  style="height:200px; width:200px;">
+                <div><%= image_tag u2.images.standard_resolution.url, class: "full", alt: "4"%></div>
+                <div><%= image_tag u3.images.standard_resolution.url, class: "full", alt: "4"%></div>
+            </li>
+
+             <li  style="height:200px; width:200px;">
+                <div><%= image_tag u5.images.standard_resolution.url, class: "full", alt: "5"%></div>
+                <div><%= image_tag u5.images.standard_resolution.url, class: "full", alt: "5"%></div>
+            </li>
+
+
+
+            <% end %>
+            <% end %>
+            <% end %>
+            <% end %>
+
+            <% end %>
+            <% end %>
+            <% end %>
+            <% end %>
+            <% end %>
+            <% end %>
+         
+        </ul>
+    </div>
+
+<!-- Activate live tiles -->
+<script type="text/javascript">
+    // apply regular slide universally unless .exclude class is applied 
+    // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
+    $(".live-tile, .flip-list").not(".exclude").liveTile();
+</script>

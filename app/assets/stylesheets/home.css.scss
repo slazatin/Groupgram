@@ -1,0 +1,23 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.picture {
+	height: 300px;
+	width: 300px;
+}
+
+.gram {
+	overflow: scroll;
+	height: 650px;
+	width: 305px;
+	float: left;
+	display: inline-block;
+}
+
+.mural {
+	overflow: scroll;
+	height: 650px;
+	width: 980px;
+	float: left;
+	display: inline-block;
+}
