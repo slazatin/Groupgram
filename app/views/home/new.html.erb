@@ -1,9 +1,15 @@
-<%= form_tag root_path, :method => 'get' do %>     
-<%= text_field_tag :query, params[:query] %>  
-<%= text_field_tag :keyword, params[:keyword] %>  
-<%= text_field_tag :keyword3, params[:keyword3] %>    
-<%= text_field_tag :keyword4, params[:keyword4] %>  
-<%= text_field_tag :keyword5, params[:keyword5] %>        
 
-<%= submit_tag "Search" %> 
-<% end %>
+	<div class="jumbotron">
+	 <h1>Create Your Instagram Mural</h1>
+	 <p>Fill in the fields with your favorite Instagrams</p>
+	<p><%= form_tag root_path, :method => 'get' do %>  </p>   
+	<p class ="field"><%= text_field_tag :query, params[:query], placeholder:"natgeo" %>  </p>
+	<p class ="field"><%= text_field_tag :keyword, params[:keyword], placeholder:"thedogist"  %>  </p>
+	<p class ="field"><%= text_field_tag :keyword3, params[:keyword3], placeholder:"surfline"  %>   </p> 
+	<p class ="field"><%= text_field_tag :keyword4, params[:keyword4], placeholder:"gopro"  %>  </p>
+	<p class ="field"><%= text_field_tag :keyword5, params[:keyword5], placeholder:"redbull"  %>   </p>     
+
+	<p><%= submit_tag "Create your mural!", :class =>"btn btn-primary btn-lg" %> </p>
+	<% end %>
+
+	</div>
